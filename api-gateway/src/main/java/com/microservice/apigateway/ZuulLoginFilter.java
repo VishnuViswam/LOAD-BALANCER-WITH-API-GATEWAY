@@ -39,6 +39,7 @@ public class ZuulLoginFilter extends ZuulFilter {
 
     @Override
     public Object run() throws ZuulException {
+		logger.info("Request is filtered");
         HttpServletRequest httpServletRequest = RequestContext.getCurrentContext().getRequest();
         logger.info("request -> {} request uri -> {} ",
                 httpServletRequest, httpServletRequest.getRequestURI());
